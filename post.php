@@ -32,21 +32,21 @@
             Nemo deserunt beatae inventore asperiores? Ipsa, officiis. Numquam consequatur aut fugiat nemo tenetur, consequuntur sunt corrupti reprehenderit ex ea doloremque vero omnis nobis beatae illo odit nisi necessitatibus architecto minima?
             </p>
         </div>
-    </main>
-    <aside id="navbar-container">
-        <h3 id="tags-title">Tags</h3>
-            <ul id="tag-list">
-                    <?php foreach ($currentPost['tags'] as $tag): ?>
-                        <li> <a href="#" class="tag"><?= $tag; ?></a> </li>
-                    <?php endforeach; ?>
+        <aside id="nav-container">
+            <h3 id="tags-title">Tags</h3>
+                <ul id="tag-list">
+                        <?php foreach ($currentPost['tags'] as $tag): ?>
+                            <li> <a href="#"><?= $tag; ?></a> </li>
+                        <?php endforeach; ?>
+                </ul>
+            <h3 id="categories-title">categorias</h3>
+            <ul id="categories-list">
+                <?php foreach ($categories as $category): ?>
+                    <li> <a href="#"><?= $category; ?></a> </li>
+                <?php endforeach; ?>
             </ul>
-        <h3 class="categories-title">categorias</h3>
-        <ul id="categories-list">
-            <?php foreach ($currentPost['categories'] as $category): ?>
-                <li> <a href="#" class="category"><?= $category; ?></a> </li>
-            <?php endforeach; ?>
-        </ul>
-    </aside>
+        </aside>
+    </main>
 
 <?php
     include_once 'templates/footer.php';
